@@ -21,7 +21,7 @@ for col in df.columns:
 
 
 players = df['Player_Name'].unique()
-Map_names = ['All', 'Inferno', 'Dust2', 'Mirage', 'Overpass', 'Cache']
+Map_names = ['All Maps', 'Inferno', 'Dust2', 'Mirage', 'Overpass', 'Cache']
 mname = ['.*', 'inferno', 'dust', 'mirage', 'overpass', 'cache']
 Features= df.columns[3:-7]
 

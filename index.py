@@ -72,7 +72,7 @@ Features= df.columns[3:-7]
 def update_graph(ma, feature):
     dg = df.loc[df.map.str.contains(ma)]
 
-    fig = px.violin(dg, y=feature, color=df.Player_Name, box=True, points="all",
+    fig = px.violin(dg, y=feature, color=dg.Player_Name, box=True, points="all",
             color_discrete_map=colors,
           hover_data=['Kills', 'Deaths', 'Assists', 'Percentage of kills with a headshot', 
           'Percentage of rounds with a Kill, Assist, Survived or Death Traded'])
@@ -182,7 +182,7 @@ def update_graph(mp, feature):
               )
 
     fig = go.Figure(data=fig1.data+fig2.data)
-    fig.update_xaxes(rangebreaks=[dict(values=dt_breaks)])
+    # fig.update_xaxes(rangebreaks=[dict(values=dt_breaks)]) ## MARCHE PAS QUAND MAP == ALL
     # fig.update_xaxes(dtick="M1",tickformat="%b\n%Y")
 
     return fig
